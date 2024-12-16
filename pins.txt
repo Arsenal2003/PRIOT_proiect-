@@ -1,0 +1,27 @@
+DH22:
+red -> 3v3  
+black -> gnd 
+yellow -> D4
+
+Humidity soil:
+red 3v3 
+black -> ground
+yellow -> D33
+
+luminosity sensor: 
+red 3v3 
+black ground 
+yellow D32
+
+buzzer:
+red 3v3 
+black ground 
+yellow D5
+
+
+
+
+
+
+
+
