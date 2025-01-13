@@ -12,6 +12,8 @@
 #define DHTPIN 4
 #define DHTTYPE DHT21     
 
+#define ESP32_ID 13420
+
 DHT dht(DHTPIN, DHTTYPE);
 
 int air_temperature = 0;
@@ -81,7 +83,7 @@ void loop() {
   Serial.println("");
 
   // activate buzzer
-  tone(buzzer_senzor_pin, 500);
+//   tone(buzzer_senzor_pin, 500);
 
 
 
@@ -101,6 +103,7 @@ void loop() {
     jsonPayload["air_humidity"] = air_humidity;
     jsonPayload["soil_humidity"] = soil_humidity;
     jsonPayload["luminosity"] = luminosity;
+    jsonPayload["ID"] = ESP32_ID;
     // jsonPayload["message"] = "Hello, this is a detailed POST request from ESP32.";
 
     String jsonString = JSON.stringify(jsonPayload);
@@ -129,5 +132,5 @@ void loop() {
   // 10000 - 10 secunde 
   // 2500 -2.5 secunde 
 
-  delay(2500);  
+  delay(60000);  
 }
